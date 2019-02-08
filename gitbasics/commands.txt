@@ -1,0 +1,30 @@
+Basics of Git command line
+git init : create an empty git repository
+git commit -m "<message>" : commit files to local repository
+git status : show the status of the current repository (what files are unmanaged/changed/etc)
+git log : display recent commits
+git remote add origin <url> : attach local repository to remote repository
+git remote -v : view the attachments (verify)
+git push origin master : push local commits from master branch to origin
+git fetch origin master : pull changes from origin (remote repo) to local repo (into git system, not persisted to file system at this point)
+git merge origin/master : merge changes from origin that were fetched to git internals into master branch (changes will now appear in file system)
+git merge origin/master --allow-unrelated-histories: merge changes and move past error about repositories having unrelated histories
+git pull origin master : fetch + merge
+
+When mutiple developers are working against the same branch of code:
+- pull latest code in the morning
+- pull latest before checking in
+- check in changes to remote (shared) branch before publishing anything anywhere
+When deploying code that has not been approved for production
+- pull the most recent code from the remote (shared) staging branch to the local staging branch
+- merge the latest changes from staging branch into the feature branch
+- check latest changes from the feature branch into the remote (shared) repository
+- deploy feature branch to staging/uat environment
+- when the feature has been tested and approved, merge the feature into the staging branch
+When deploying code that has been approved for production
+- ensure that the staging branch has been updated with the latest changes (hotfixes, etc) to the master branch
+- merge the staging branch into master
+- check in the updated local master branch to the remote(shared) repository
+- deploy master to staging/uat for final round of testing
+- deploy master to production after testing is completed and approved
+- determine if the feature branch can now be deleted
