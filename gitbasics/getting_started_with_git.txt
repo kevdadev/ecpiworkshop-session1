@@ -1,0 +1,53 @@
+Distributed Version Control System: Git has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer. This means that the code is not just stored in a central server, but the full copy of the code is present in all the developers’ computers. Git is a Distributed Version Control System since the code is present in every developer’s computer.
+
+Download git
+This link has details on how to install Git in multiple operating systems:
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Linux
+Windows
+macOS
+
+
+-> git --version
+
+create a folder ecpiworkshop-day1
+
+-> cd Path to created folder
+-> git init
+The git init command adds a local Git repository to the project.
+
+Create a text file -> demo.txt
+
+add the text "Initial Content"
+
+-> git add demo.txt
+
+-> git commit -m "Initial Commit"
+
+open up demo.txt and add another line like "Adding more content". Save
+
+-> git status
+
+
+-> git add demo.txt
+-> git commit -m "demo.txt file is modified"
+
+------------------------
+Create GitHub account
+create project ecpiworkshop-day 1
+
+From Repo screen,click Clone or download ang grab url
+-------------------------------
+
+-> git remote add origin [repository url]
+-> git push -u origin master
+This pushes the code from the master branch in the local repository to the master branch in the remote repository.
+
+git pull origin master
+git pull is used to pull the latest changes from the remote repository into the local repository. The remote repository code is updated continuously by various developers, hence git pull is necessary:
+
+git clone [repository url]
+git clone is used to clone an existing remote repository into your computer. 
+
+
