@@ -51,3 +51,5 @@ git clone [repository url]
 git clone is used to clone an existing remote repository into your computer. 
 
 
+
+https://medium.freecodecamp.org/what-is-git-and-how-to-use-it-c341b049ae61
